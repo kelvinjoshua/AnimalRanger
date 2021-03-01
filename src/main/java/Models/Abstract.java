@@ -29,8 +29,9 @@ public class Abstract {
         return id;
     }
 
-
-
-
-
+    /*to allow us to compare objects*/
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }

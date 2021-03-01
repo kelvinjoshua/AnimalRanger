@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}Welcome| Wildlife Tracker{{/block}}</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="/images/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
+</head>
+<body>
+<ul>
+    <li><a class="active" href="/">Home</a></li>
+    <li><a href="/Animals-form">Animals form</a></li>
+    <li><a href="/Animals">Animal Details</a></li>
+    <li><a href="/sightings-form">Sightings form</a></li>
+    <li><a href="/sightingsdisplay">Sightings Details</a></li>
+</ul>
+<div class="container">
+    <div class="page-header">
+
+    </div>
+    <div class="col-md-12">
+        {{#block "content"}}
+        {{/block}}
+    </div>
+</div>
+{{#block "footer"}}
+    </body>
+    </html>
+{{/block}}

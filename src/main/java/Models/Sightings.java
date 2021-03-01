@@ -14,5 +14,20 @@ public class Sightings {
         this.location = location;
         this.animalId = animalId;
     }
+     /*getters*/
+     public int getAnimalId() {
+         return animalId;
+     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public String getRanger() {
+        return ranger;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

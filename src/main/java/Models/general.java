@@ -1,7 +1,7 @@
 package Models;
 import org.sql2o.Connection;
 
-public class Abstract {
+public abstract class general {
     public String name;
     public String type;
     public int id;
@@ -24,10 +24,10 @@ public class Abstract {
     /*this is testAnimal object*/
     @Override
     public boolean equals(Object testAnimal) {
-        if(!(testAnimal instanceof Animal)){
+        if(!(testAnimal instanceof general)){
             return false;
         }
-        Animal newAnimal = (Animal) testAnimal;
+        general newAnimal = (general) testAnimal;
         return this.getName().equals(newAnimal.getName()) && this.getType().equals(newAnimal.getType());
     }
     /*save object to database, Crete sql2o object to use its methods*/

@@ -33,5 +33,4 @@ public class Safe extends general{
         }
     }
 
-
 }

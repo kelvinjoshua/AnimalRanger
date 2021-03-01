@@ -30,4 +30,22 @@ public class Sightings {
     public int getId() {
         return id;
     }
+    /*Class-wide data*/
+
+    public static Sightings find(int id) {
+        try(Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings where id=:id";
+            Sightings sighting= con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Sightings.class);
+            return sighting;/*return object with specified id*/
+        }
+    }
+    public static List<Sightings> getAll() {
+        String sql = "SELECT * FROM sightings";
+        try(Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql).executeAndFetch(Sightings.class);/*all instances of Sightings*/
+
+        }
+    }
 }

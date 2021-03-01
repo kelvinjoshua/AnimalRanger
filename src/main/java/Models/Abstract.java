@@ -30,13 +30,14 @@ public class Abstract {
     }
 
     /*to allow us to compare objects*/
+    /*this is testAnimal object*/
     @Override
     public boolean equals(Object testAnimal) {
         if(!(testAnimal instanceof Animal)){
             return false;
         }
         Animal newAnimal = (Animal) testAnimal;
-        return this.getName().equals(newAnimal.getName())
+        return this.getName().equals(newAnimal.getName()) && this.getType().equals(newAnimal.getType());
     }
 
 

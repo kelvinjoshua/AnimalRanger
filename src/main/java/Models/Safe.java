@@ -18,7 +18,7 @@ public class Safe extends general{
             Safe animal = con.createQuery(sql)
                     .addParameter("id", id)
                     .executeAndFetchFirst(Safe.class);
-            return animal;
+            return animal;/*Specific animal by unique id*/
 
         }
     }
@@ -27,9 +27,7 @@ public class Safe extends general{
     public static List<Safe> all() {
         String sql = "SELECT * FROM animals WHERE type = 'Not Endangered'";
         try(Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql)
-                    .throwOnMappingFailure(false)
-                    .executeAndFetch(Safe.class);
+            return con.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Safe.class);
         }
     }
 

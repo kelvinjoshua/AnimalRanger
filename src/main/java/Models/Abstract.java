@@ -31,7 +31,12 @@ public class Abstract {
 
     /*to allow us to compare objects*/
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object testAnimal) {
+        if(!(testAnimal instanceof Object)){
+            return false;
+        }
+
     }
+
+
 }

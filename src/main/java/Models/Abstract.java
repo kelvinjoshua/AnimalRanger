@@ -1,4 +1,5 @@
 package Models;
+import org.sql2o.Connection;
 
 public class Abstract {
     public String name;
@@ -10,7 +11,6 @@ public class Abstract {
     public String getName() {
         return name;
     }
-
 
     public String getType() {
         return type;

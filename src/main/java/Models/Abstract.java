@@ -2,8 +2,6 @@ package Models;
 
 public class Abstract {
     public String name;
-    public String age;
-    public String health;
     public String type;
     public int id;
 
@@ -13,13 +11,6 @@ public class Abstract {
         return name;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public String getHealth() {
-        return health;
-    }
 
     public String getType() {
         return type;
@@ -39,6 +30,9 @@ public class Abstract {
         Animal newAnimal = (Animal) testAnimal;
         return this.getName().equals(newAnimal.getName()) && this.getType().equals(newAnimal.getType());
     }
+    /*save object to database*/
+    public void save(){
 
+    }
 
 }

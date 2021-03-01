@@ -48,4 +48,14 @@ public class Sightings {
 
         }
     }
+
+    /*save A sightings object*/
+    public void save() {
+        try(Connection con = DB.sql2o.open())  {
+            String sql = "INSERT INTO sightings (ranger, location, animalId) VALUES (:ranger, :location, :animalId)";
+            this.id = (int) con.createQuery(sql, true) .addParameter("ranger",this.ranger).addParameter("location", this.location).addParameter("animalId", this.animalId).executeUpdate().getKey();
+        }
+    }
+
+
 }

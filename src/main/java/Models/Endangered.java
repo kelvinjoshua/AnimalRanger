@@ -13,7 +13,7 @@ public class Endangered extends general {
         this.name = name;
         this.health = health;
         this.age = age;
-        type = STATUS;
+        this.type = STATUS;
     }
 
     /*class-wide data*/

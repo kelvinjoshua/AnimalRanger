@@ -30,8 +30,14 @@ public class Abstract {
         Animal newAnimal = (Animal) testAnimal;
         return this.getName().equals(newAnimal.getName()) && this.getType().equals(newAnimal.getType());
     }
-    /*save object to database*/
+    /*save object to database, Crete sql2o object to use its methods*/
     public void save(){
+        try(Connection con = DB.sql2o.open()){
+            String sql = "INSERT INTO animals (name, type) VALUES (:name, :type)";
+            /*this- object being added,retrieve properties*/
+            /*create obj,connect into database,execute query statement,update existing fields,retrieve primary key*/
+            this.id = (int) con.createQuery(sql,true).addParameter("name",this.name).addParameter(type,this.type).executeUpdate().getKey();
+        }
 
     }
 

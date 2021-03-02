@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<ul>
-    <li><a class="active" href="/">Home</a></li>
-    <li><a href="/Animals-form">Animals form</a></li>
-    <li><a href="/Animals">Animal Details</a></li>
-    <li><a href="/sightings-form">Sightings form</a></li>
-    <li><a href="/sightingsdisplay">Sightings Details</a></li>
+<ul class="nav nav-tabs">
+    <li role="presentation"><a class="active" href="/">Home</a></li>
+    <li role="presentation"><a href="/Animals-form">Animals form</a></li>
+    <li role="presentation"><a href="/Animals">Animal Details</a></li>
+    <li role="presentation"><a href="/sightings-form">Sightings form</a></li>
+    <li role="presentation"><a href="/sightingsdisplay">Sightings Details</a></li>
 </ul>
 <div class="container">
     <div class="page-header">
@@ -26,6 +26,13 @@
     </div>
 </div>
 {{#block "footer"}}
+    <style>
+        .nav{
+             font-family: 'Acme', sans-serif;
+    font-size: 21px;
+        }
+
+    </style>
     </body>
     </html>
 {{/block}}

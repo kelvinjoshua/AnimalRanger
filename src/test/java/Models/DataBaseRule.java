@@ -8,7 +8,7 @@ public class DataBaseRule extends ExternalResource {
     /*Setup data-base connection before every test*/
     @Override
     protected void before(){
-        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test", "bale", "kelvinjoshua");
+        DB.sql2o = new Sql2o("jdbc:postgresql://localhost:5432/wildlife_tracker_test", null,null);
     }
     /*Delete trailing data from previous tests before next test*/
     @Override

@@ -1,0 +1,29 @@
+{{#partial "content"}}
+    <div class="row">
+        <div class="col-md-10">
+            <h3>Sightings Details</h3>
+
+            <table>
+                <tr>
+
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>AnimalId</th>
+
+                </tr>
+                {{#each sightings}}
+                    <tr>
+
+                        <td>{{rangerName}}</td>
+                        <td>{{location}}</td>
+                        <td>{{animalId}}</td>
+
+                    </tr>
+                {{/each}}
+
+            </table>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

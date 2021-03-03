@@ -6,16 +6,20 @@ import java.util.List;
 
 public class Safe extends general{
     private static final String STATUS = "safe";
-   public Safe(String name){
+    private String health;
+    private String age;
+   public Safe(String name,String health, String age){
         this.name=name;
+       this.health = health;
+       this.age = age;
         this.type= STATUS;
     }
     /*save into database*/
 
     public void save(){
         try(Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals (name, type) VALUES(:name, :type)";
-            this.id =(int) con.createQuery(sql,true).addParameter("name",this.name).addParameter("type",this.type).executeUpdate().getKey();
+            String sql = "INSERT INTO animals (name, type,health,age) VALUES(:name, :type,:health,:age)";
+            this.id =(int) con.createQuery(sql,true).addParameter("name",this.name).addParameter("type",this.type).addParameter("health", this.health).addParameter("age", this.age).executeUpdate().getKey();
         }
     }
     /*class-wide data*/

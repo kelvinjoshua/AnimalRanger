@@ -8,6 +8,7 @@ public class Safe extends general{
     private static final String STATUS = "safe";
     private String health;
     private String age;
+  /*constructor*/
    public Safe(String name,String health, String age){
         this.name=name;
        this.health = health;

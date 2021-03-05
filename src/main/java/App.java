@@ -44,13 +44,15 @@ public class App{
             String location = request.queryParams("location");
             int animalId = Integer.parseInt(request.queryParams("animalId"));
             model.put("ranger", ranger);
-            model.put("location", location);
+           model.put("location", location);
             model.put("animalId", animalId);
+           Sightings sighting = new Sightings(ranger,location,animalId);
+           sighting.save();
             return new ModelAndView(model, "displaySighting.hbs");
         }, new HandlebarsTemplateEngine());
 
 
-        post("/sightings", (request, response) -> {
+       get("/sightings", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String ranger = request.queryParams("ranger");
             String location = request.queryParams("location");
@@ -59,6 +61,8 @@ public class App{
             first.save();
             return null;
         }, new HandlebarsTemplateEngine());
+
+
             /*show animal details*/
 
         post("/Animals", (request, response) -> {

@@ -1,25 +1,25 @@
 {{#partial "content"}}
     <div class="row">
     <div class="col-md-10">
-        <h3>Sightings Details</h3>
+        <h3>Sightings Detail</h3>
+        <table class="table table-hover ">
+             <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Age</th>
+                 </tr>
+             </thead>
 
-    <table class="table table-hover ">
-        <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Health</th>
-            <th scope="col">Age</th>
-        </tr>
-        </thead>
-    <tbody>
-        <tr>
-            <td>{{name}}</td>
-            <td>{{type}}</td>
-            <td>{{health}}</td>
-            <td>{{age}}</td>
-        </tr>
-    </tbody>
+            <tbody>
+                  <tr>
+                    <td>{{name}}</td>
+                    <td>{{type}}</td>
+                    <td>{{health}}</td>
+                    <td>{{age}}</td>
+                 </tr>
+            </tbody>
         </table>
 
         </div>

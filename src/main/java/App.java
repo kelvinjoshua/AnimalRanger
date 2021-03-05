@@ -1,4 +1,6 @@
 
+import Models.Endangered;
+import Models.Safe;
 import Models.Sightings;
 import spark.ModelAndView;
 import java.util.ArrayList;
@@ -51,21 +53,9 @@ public class App{
             return new ModelAndView(model, "displaySighting.hbs");
         }, new HandlebarsTemplateEngine());
 
-
-       get("/sightings", (request, response) -> {
-            Map<String, Object> model = new HashMap<>();
-            String ranger = request.queryParams("ranger");
-            String location = request.queryParams("location");
-            int animalId = Integer.parseInt(request.queryParams("animalId"));
-            Sightings first = new Sightings(ranger,location,animalId);
-            first.save();
-            return null;
-        }, new HandlebarsTemplateEngine());
-
-
             /*show animal details*/
 
-        post("/Animals", (request, response) -> {
+        post("/AnimalDetail", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String name = request.queryParams("name");
             String type = request.queryParams("type");
@@ -75,6 +65,16 @@ public class App{
             model.put("type", type);
             model.put("health", health);
             model.put("age",age);
+
+            if(type == "safe"){
+                Safe animal = new Safe(name,age,health,type);
+                animal.save();
+            }
+            else {
+                Endangered animal = new Endangered(name,age,health,type);
+                animal.save();
+            }
+
             return new ModelAndView(model, "displayAnimals.hbs");
 
         }, new HandlebarsTemplateEngine());
@@ -86,6 +86,14 @@ public class App{
             return new ModelAndView(model, "displayAll.hbs");
         }, new HandlebarsTemplateEngine());
 
+        get("/Animals", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            List<Safe>  safeAnimal = Safe.all();
+            List<Endangered>  unsafeAnimal = Endangered.all();
+            model.put("safeAnimal", safeAnimal);
+            model.put("unsafeAnimal",unsafeAnimal);
+            return new ModelAndView(model, "allAnimals.hbs");
+        }, new HandlebarsTemplateEngine());
                 /*
         get("/sightings", (request, response) -> {
             Map<String, Object> model = new HashMap<>();

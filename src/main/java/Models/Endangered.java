@@ -9,7 +9,7 @@ public class Endangered extends general {
     private String health;
     private String age;
 
-    public Endangered(String name, String health, String age) {
+    public Endangered(String name, String health, String age ,String STATUS) {
         this.name = name;
         this.health = health;
         this.age = age;
@@ -28,7 +28,7 @@ public class Endangered extends general {
 
     /*list of all unsafe animals*/
     public static List<Endangered> all() {
-        String sql = "SELECT * FROM animals WHERE type = 'Not Endangered'";
+        String sql = "SELECT * FROM animals WHERE type = 'endangered'";
         try (Connection con = DB.sql2o.open()) {
             return con.createQuery(sql).throwOnMappingFailure(false).executeAndFetch(Endangered.class);
 
@@ -40,6 +40,9 @@ public class Endangered extends general {
         try (Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO animals (name, type, health, age) VALUES (:name, :type, :health, :age)";
             this.id = (int) con.createQuery(sql, true).addParameter("name", this.name).addParameter("type", this.type).addParameter("health", this.health).addParameter("age", this.age).executeUpdate().getKey();
+        }
+        catch (ClassCastException exc){
+
         }
     }
 

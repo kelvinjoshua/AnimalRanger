@@ -1,0 +1,63 @@
+{{#partial "content"}}
+    <div class="row">
+        <div class="col-md-10">
+            <h3>Safe animals</h3>
+            <table class="table table-hover ">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Age</th>
+                </tr>
+                </thead>
+            <tbody>
+
+                    {{#each safeAnimal}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{type}}</td>
+                        <td>{{health}}</td>
+                        <td>{{age}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+
+            <h3>Endangered animals</h3>
+            <table class="table table-hover ">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Health</th>
+                    <th scope="col">Age</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {{#each unsafeAnimal}}
+                         <tr>
+                             <td>{{name}}</td>
+                             <td>{{type}}</td>
+                             <td>{{health}}</td>
+                             <td>{{age}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <style>
+         .row{
+            font-family: 'Acme', sans-serif;
+            font-size: 21px;
+             }
+    </style>
+
+{{/partial}}
+
+{{> layout.hbs}}
+

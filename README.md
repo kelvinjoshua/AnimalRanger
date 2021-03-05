@@ -6,7 +6,9 @@
 * Africa is home to some of the world's most endangered species,
   including the mountain gorilla, Grevy’s zebra, and Ethiopian wolf.
   To protect populations from further decline, our on-the-ground safeguards involve training rangers.
+ 
   For this application the user(ranger), keys in their details that are saved as well as animal findings.
+
 ##Live link
 
 ## Setup requirements
@@ -20,7 +22,7 @@
 * SELECT * FROM sightings;  - view all ranger  entries.
 * \q - disconnect from database
 ## Sample
-<img src ="images/sample.jpg" height="100%" width ="auto">
+<img src ="Conserve/sample.jpg" height="100%" width ="auto">
 
 ## Technologies used
 * Spark web-framework.

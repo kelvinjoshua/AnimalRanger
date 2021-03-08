@@ -1,0 +1,47 @@
+
+{{#partial "content"}}
+    <div class="content-wrapper">
+        <div class="two-column-wrapper">
+            <div class="profile-image-wrapper">
+                <img src="images/wildlife-conservation.jpg" alt="">
+            </div>
+
+            <div class="profile-content-wrapper">
+
+                <h1>Wildlife conservation</h1>
+                <p>
+                    Africa is home to some of the world's most endangered species,
+                    including the mountain gorilla, Grevy’s zebra, and Ethiopian wolf.
+                    To protect populations from further decline, our on-the-ground safeguards involve training rangers and using sniffer dogs to stop wildlife traffickers.
+                    Wildlife must survive in their natural habitats, so we empower local communities through conservation-friendly development and work with international agencies to protect Africa’s natural resources.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!--index.hbs styles -->
+<style>
+    .two-column-wrapper {
+        font-family: 'Acme', sans-serif;
+        font-size: 21px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        }
+
+       .profile-image-wrapper img {
+            width: 100%;
+        }
+
+        .profile-content-wrapper {
+            padding: 20px;
+        }
+
+        .profile-content-wrapper h1 {
+            color: lightseagreen;
+        }
+
+</style>
+
+{{/partial}}
+
+{{> layout.hbs}}

@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div class="row">
+        <div class="col-md-10">
+            <h3>Sightings Details</h3>
+
+            <table class="table table-hover ">
+               <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">AnimalId</th>
+                </tr>
+               </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ranger}}</td>
+                        <td>{{location}}</td>
+                        <td>{{animalId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <style>
+         .row{
+            font-family: 'Acme', sans-serif;
+            font-size: 21px;
+    }
+    </style>
+{{/partial}}
+
+{{> layout.hbs}}
+

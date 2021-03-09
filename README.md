@@ -2,26 +2,33 @@
 * Animal-Ranger
 ## Author
 * Kelvin Joshua Bale
+##Deployment
+* live link:
+  https://wildlifetracking.herokuapp.com/
 ## Project description.
 * Africa is home to some of the world's most endangered species,
   including the mountain gorilla, Grevy’s zebra, and Ethiopian wolf.
   To protect populations from further decline, our on-the-ground safeguards involve training rangers.
  
-  For this application the user(ranger), keys in their details that are saved as well as animal findings.
-
-
-##Live link
-https://wildlifetracking.herokuapp.com/
+  * For this application the user(ranger), keys in their details that are saved as well as animal findings.
+  
 
 ## Setup requirements
 * Clone this respository locally,to allow us to view our database.
  *  Add animal and ranger details ,from our application.
 * View entries made by running the following commands in terminal:
-  ## Commands
-* psql-connect to postgres Database.
+  ## local  database setup.
+*  Navigate to Models/DB .
+  * Uncomment localhost with your  Machine's  Postgres user & Password credentials.
+   * Comment out any code with usage of  "connectionstring".
+* In terminal, run psql - Connect to postgres Database.
+* CREATE DATABASE wildlife_tracker;
 * \c wildlife_tracker  - connect to our local database.
-* SELECT * FROM animals;  - view all animal entries.
-* SELECT * FROM sightings;  - view all ranger  entries.
+  * CREATE TABLE animals (id integer, name VARCHAR,type VARCHAR,health VARCHAR, age VARCHAR);
+   * CREATE TABLE sightings (ranger VARCHAR, location VARCHAR,animal_id integer);
+  
+* SELECT * FROM animals;  -  View all animal entries.
+* SELECT * FROM sightings;  - View all ranger  entries.
 * \q - disconnect from database
 ## Sample
 ![sample](https://user-images.githubusercontent.com/60692205/110475915-7a771e80-80f2-11eb-8e23-c2dc230d2fc6.jpg)

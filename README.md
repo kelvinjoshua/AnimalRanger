@@ -24,7 +24,7 @@ https://wildlifetracking.herokuapp.com/
 * SELECT * FROM sightings;  - view all ranger  entries.
 * \q - disconnect from database
 ## Sample
-<img src ="Conserve/sample.jpg" height="100%" width ="auto">
+![sample](https://user-images.githubusercontent.com/60692205/110475915-7a771e80-80f2-11eb-8e23-c2dc230d2fc6.jpg)
 
 ## Technologies used
 * Spark web-framework.

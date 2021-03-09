@@ -2,16 +2,15 @@
 * Animal-Ranger
 ## Author
 * Kelvin Joshua Bale
-##Deployment
-* live link:
-  https://wildlifetracking.herokuapp.com/
+
 ## Project description.
 * Africa is home to some of the world's most endangered species,
   including the mountain gorilla, Grevy’s zebra, and Ethiopian wolf.
   To protect populations from further decline, our on-the-ground safeguards involve training rangers.
  
   * For this application the user(ranger), keys in their details that are saved as well as animal findings.
-  
+  * live link:
+    https://wildlifetracking.herokuapp.com/
 
 ## Setup requirements
 * Clone this respository locally,to allow us to view our database.
